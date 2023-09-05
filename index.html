@@ -1,7 +1,23 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>Terminal Website</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <div id="splashScreen" class="splash-screen">
+    ksnarf.dev OS v0.1a
+    welcome back
+  </div>
+
+  <div id="console" class="hidden">
+    <div id="output"></div>
+    <div id="inputLine" class="input-line">
+      <div class="prompt">></div>
+      <div><input type="text" id="input" class="input" autofocus /></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
