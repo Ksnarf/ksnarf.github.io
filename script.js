@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   setTimeout(function () {
     document.getElementById('splashScreen').classList.add('hidden');
     document.getElementById('console').classList.remove('hidden');
+    document.getElementById('input').focus();
   }, 3000);
 
   const input = document.getElementById('input');
