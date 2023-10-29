@@ -29,7 +29,16 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         output.innerHTML += 'Unknown command<br>';
       }
+      
+      if (command === 'fivem') {
+        let projectLinks = 'Fivem Projects:<br>';
+        fivemProjects.forEach(project => {
+            projectLinks += `<a href="${project.url}" target="_blank" style="color:green;">${project.name}</a><br>`;
+        });
+        output.innerHTML += projectLinks;
     }
+
+      }
   });
 });
 
@@ -41,8 +50,21 @@ document.querySelectorAll('.command-link').forEach(link => {
 
         // Trigger the command - can be modified based on your requirements
         if (command === 'fivem') {
-            document.getElementById('output').innerHTML += 'List of active and in-progress fivem modules<br>';
+            document.getElementById('output').innerHTML += 'List of active and in-progress fivem modules<br>'; 
         }
+        if (command === 'ls'
         // Add more command checks as needed
     });
 });
+
+const fivemProjects = [
+    {
+        name: "Project 1",
+        url: "https://example1.com"
+    },
+    {
+        name: "Project 2",
+        url: "https://example2.com"
+    },
+    // ... add more projects as needed
+];
