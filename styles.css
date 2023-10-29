@@ -17,6 +17,7 @@ body {
   display: none;
 }
 
+
 .input-line {
   display: flex;
 }
@@ -30,4 +31,15 @@ body {
 
 .prompt {
   margin-right: 5px;
+}
+
+.command-link {
+    color: green;
+    text-decoration: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.command-link:hover {
+    text-decoration: underline;
 }

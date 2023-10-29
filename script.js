@@ -32,3 +32,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+document.querySelectorAll('.command-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const command = e.target.getAttribute('data-command');
+        document.getElementById('input').value = command;
+
+        // Trigger the command - can be modified based on your requirements
+        if (command === 'fivem') {
+            document.getElementById('output').innerHTML += 'List of active and in-progress fivem modules<br>';
+        }
+        // Add more command checks as needed
+    });
+});
